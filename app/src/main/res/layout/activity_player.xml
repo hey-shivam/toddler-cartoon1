@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Absorbs every touch on the screen so nothing she does (tapping, dragging,
+         mashing with both hands) can pause, seek, or exit the video. -->
+    <View
+        android:id="@+id/touchBlockerOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <com.example.toddlercartoons.CountdownRingView
+        android:id="@+id/countdownRing"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp" />
+
+    <!-- Invisible parent-only exit: press and hold this corner for ~3 seconds,
+         then enter the PIN, to end a session early (e.g. dinner time, doctor's visit).
+         Placed in a corner + requires a long hold specifically so a toddler tapping
+         or swiping randomly won't trigger it by accident. -->
+    <View
+        android:id="@+id/parentExitHotspot"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|start"
+        android:background="@android:color/transparent" />
+
+</FrameLayout>

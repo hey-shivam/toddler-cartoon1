@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.ToddlerCartoons" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#7FB3D5</item>
+        <item name="colorPrimaryDark">#5A9BC4</item>
+        <item name="colorAccent">#F4A261</item>
+    </style>
+</resources>
